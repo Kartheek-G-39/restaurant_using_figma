@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+   --font-base: 'Cormorant Upright', serif;
+   --font-alt: 'Open Sans', sans-serif;
+
+   --color-golden: #dcca87;
+   --color-black: #0c0c0c;
+   --color-gray: #545454;
+   --color-crimson: #f5efdb;
+   --color-grey: #aaaaaa;
+   --color-white: #ffffff;
+   background: var(--color-black);
+}
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   scroll-behavior: smooth;
+}
+
+a {
+   color: unset;
+   text-decoration: none;
+}
+
+.slide-bottom {
+   -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+   animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-bottom {
+   0% {
+      -webkit-transform: translateY(-25%);
+      transform: translateY(-25%);
+   }
+   100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+   }
+}
+
+@keyframes slide-bottom {
+   0% {
+      -webkit-transform: translateY(-25%);
+      transform: translateY(-25%);
+   }
+   100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+   }
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+   width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+   -webkit-border-radius: 10px;
+   border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   -webkit-border-radius: 10px;
+   border-radius: 10px;
+   background: var(--color-golden);
+   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+   background: rgba(174, 194, 204, 0.4);
+}
+
+@media screen and (max-width: 650px) {
+   :root {
+      background: var(--color-black);
+      z-index: -5;
+   }
+}
